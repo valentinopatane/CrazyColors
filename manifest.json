@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "CrazyColors - Color Picker",
+    "short_name": "CrazyColors",
+    "author": "Valentino Patané",
+    "description": "A handful and easy to use, eye dropper - color picker in the web for designers, creatives and more.",
+    "version": "1.0.0",
+    "action": {
+        "default_popup": "./popup.html",
+        "default_icon": "./ico.png"
+    },
+    "content_scripts": [
+        {
+        "matches": ["<all_urls>"],
+        "js": ["Content.js"]
+        }
+    ],
+    "background": {
+        "js": ["background.js"]
+    },
+    "permissions": [
+        "tabs",
+        "storage"
+    ]
+}
